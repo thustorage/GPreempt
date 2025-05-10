@@ -1,0 +1,185 @@
+{
+    "time": 60,
+    "tasks": [
+        {
+            "id": "resnet152_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 20
+            },
+            "client": {
+                "name": "resnet152_rt",
+                "model_name": "resnet152",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "densenet_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 20
+            },
+            "client": {
+                "name": "densenet_rt",
+                "model_name": "densenet",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "vgg_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 20
+            },
+            "client": {
+                "name": "vgg_rt",
+                "model_name": "vgg",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "inception_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 20
+            },
+            "client": {
+                "name": "inception_rt",
+                "model_name": "inception",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "bert_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 20
+            },
+            "client": {
+                "name": "bert_rt",
+                "model_name": "bert",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "resnet152_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "resnet152_be",
+                "model_name": "resnet152",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "densenet_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "densenet_be",
+                "model_name": "densenet",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "vgg_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "vgg_be",
+                "model_name": "vgg",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "inception_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "inception_be",
+                "model_name": "inception",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "bert_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "bert_be",
+                "model_name": "bert",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        }
+    ]
+}

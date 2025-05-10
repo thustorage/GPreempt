@@ -1,0 +1,9 @@
+build
+model
+!model/makefile
+.cache
+*.pyc
+*.cubin
+mylog
+results
+reef_results

@@ -1,0 +1,99 @@
+{
+    "time": 1,
+    "tasks": [
+        {
+            "id": "vgg_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "vgg_rt",
+                "model_name": "vgg",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "bfs_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "bfs_be",
+                "model_name": "bfs",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": false,
+                "preprocess_time": 200,
+                "graph_path": "crankseg_1/crankseg_1.bel"
+            }
+        },
+        {
+            "id": "sssp_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "sssp_be",
+                "model_name": "sssp",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": false,
+                "preprocess_time": 200,
+                "graph_path": "crankseg_1/crankseg_1.bel"
+            }
+        },
+        {
+            "id": "pagerank_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "pagerank_be",
+                "model_name": "pagerank",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": false,
+                "preprocess_time": 200,
+                "graph_path": "crankseg_1/crankseg_1.bel"
+            }
+        },
+        {
+            "id": "cc_be",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "cc_be",
+                "model_name": "cc",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": false,
+                "preprocess_time": 200,
+                "graph_path": "crankseg_1/crankseg_1.bel"
+            }
+        }
+    ]
+}

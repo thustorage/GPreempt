@@ -1,0 +1,39 @@
+{
+    "time": 20,
+    "tasks": [
+        {
+            "id": "vgg_rt",
+            "load": {
+                "type": "periodic",
+                "priority": 0,
+                "frequency": 100
+            },
+            "client": {
+                "name": "vgg_rt",
+                "model_name": "vgg",
+                "priority": 0,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 200
+            }
+        },
+        {
+            "id": "miniweather_be",
+            "load": {
+                "type": "continuous"
+            },
+            "client": {
+                "name": "miniweather_be",
+                "model_name": "miniweather",
+                "priority": 1,
+                "batch_size": 1,
+                "tfs_grpc_addr": "localhost:8500",
+                "triton_grpc_addr": "localhost:8001",
+                "use_cuda_graph": true,
+                "preprocess_time": 0
+            }
+        }
+    ]
+}

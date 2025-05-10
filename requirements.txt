@@ -1,0 +1,10 @@
+numpy
+decorator
+psutil
+packaging
+attrs
+pytest
+typing_extensions
+matplotlib
+pandas
+seaborn
