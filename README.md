@@ -64,14 +64,24 @@ Please see the official GDRCopy repository for installation instructions: [GDRCo
 
 Use the python scripts in `scripts/compile` folder. `compile-bert.py` is used to compile bert model. Others use `compile.py`
 
-A self-modified version of tvm is needed. So before running the script, set the following environment variable:
+A self-modified version of tvm is needed. So before running the script, prepare the tvm:
+```shell
+git clone https://github.com/apache/tvm.git
+cd tvm
+git checkout 513c2be0c3b853
+git apply ${REPO_ROOT}/patch/tvm.patch
+```
+
+Build the tvm according to the instruction of tvm and set the following environment variable:
 
 ```shell
 export PYTHONPATH=/path/to/tvm/python:$PYTHONPATH
 pip install -r requirements.txt
 ```
 
-Transform and compile the model:
+See scripts in `scripts/compile` to get the model cuda/hip code and parameters.
+
+After getting parameters from tvm, transform and compile the model:
 
 ```shell
 cd model
