@@ -88,6 +88,8 @@ cd model
 make
 ```
 
+We would like to thank the author of [https://github.com/francis0407/tvm](https://github.com/francis0407/tvm) for providing a modified version of TVM that greatly facilitated our development.
+
 ### Build GPreempt
 Remember to run `git submodule update --init --recursive` before building GPreempt. This will download the required submodules.
 
