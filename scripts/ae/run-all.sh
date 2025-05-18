@@ -9,9 +9,9 @@ CONFIG_PATH="${SOURCE_DIR}/config"
 mkdir -p "${RESULT_PATH}/data"
 mkdir -p "${RESULT_PATH}/figures"
 
-"${SCRIPT_PATH}/run-cuda.sh"
-"${SCRIPT_PATH}/run-hip.sh"
-"${SCRIPT_PATH}/run-micro.sh"
+"${SCRIPT_PATH}/run-cuda.sh" "${RESULT_PATH}"
+"${SCRIPT_PATH}/run-hip.sh" "${RESULT_PATH}"
+"${SCRIPT_PATH}/run-micro.sh" "${RESULT_PATH}"
 
 # Copy the results of reef to the data directory
 # Because reef cannot run on ubuntu 22.04
