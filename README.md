@@ -164,7 +164,9 @@ cd scripts/plot
 python3 plot.py -r <path_to_result_dir> -f <figures_you_want_to_draw>
 ```
 
-where `<path_to_result_dir>` is the directory where you stored the results. For example, if you stored the results in `result-reviewer-A`, please run: 
+where `<path_to_result_dir>` is the directory where you stored the results. 
+By default, if you do not specify the path, you should run it in the `scripts/plot` directory.
+For example, if you stored the results in `result-reviewer-A`, please run: 
 ```shell
 cd scripts/plot
 python3 plot.py -r result-reviewer-A
